@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "aside main main main main"
+    "footer footer footer footer footer";
+}
+
+.page-com {
+  min-height: 100px;
+   /* background-color: aquamarine;
+  border: 2px solid black; */
+}
+
+#page-component1 {
+  height: 130px;
+  background-color: white;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul,
+.nav {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+select,
+.contact-btn {
+  border: none;
+  background-color: transparent;
+  font-weight: 800;
+}
+
+.reserve-btn {
+  border: none;
+  background-color: #e40000;
+  padding: 5px 30px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reserve-btn:active {
+  background-color: brown;
+}
+
+i {
+  font-size: 1.5em;
+}
+/* ---------------------- */
+#page-component2 {
+  grid-area: aside;
+  margin: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 21vw;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px lightblue;
+
+}
+
+.menu-card-header {
+  padding: 20px;
+  background-color: orangered;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.item {
+  padding: 16px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.item:hover {
+  background-color: #f0f0f0;
+  border-right: 4px solid rgb(25, 223, 14);
+}
+
+.deal {
+  background-color: rgb(239, 246, 246);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 400px;
+  box-shadow: 0px 0px 10px lightblue;
+
+}
+
+.deal-header {
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.deal>img {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.size {
+  display: flex;
+  gap: 15px;
+}
+
+.size div {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px lightblue;
+}
+
+.size div:nth-child(1) {
+  background-color: orangered;
+  color: white;
+}
+
+.price {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.deal>p {
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.chef{
+  height: 700px;
+  background-image: url(https://i.pinimg.com/564x/12/ac/60/12ac606896dfc98f4806b7acababed67.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 10px lightblue;
+}
+
+/* ---------------- */
+#page-component3 {
+  grid-area: main;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.offer{
+  background-color: black;
+  color: white;
+  display: flex;
+  width: 71vw;
+}
+.offer-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 40px;
+}
+.offer >img{
+  height: 430px;
+}
+.offer-note{
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+}
+.offer-header{
+  font-size: 60px;
+  font-weight: 700;
+}
+.offer-info >p{
+  font-size: 15px;
+}
+.offer-info >button{
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+}
+.popular{
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,150px);
+  gap: 20px;
+  color: white;
+}
+.popular-item-1{
+  grid-row: 1/3;
+  background-image: url(./biriyani.jpg);
+  background-size: cover;
+  padding: 20px;
+}
+.popular-item-2{
+  background-image: url(https://i.pinimg.com/564x/a6/08/dc/a608dca35982e969d82c9fbde3ec52a7.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+.popular-item-3{
+  background-image: url(./leg-piece.jpg);
+  background-size: cover;
+  padding: 20px;
+}
+.display-box{
+  display: flex;
+   flex-direction: column;
+   min-height: 500px;
+}
+.display-info{
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.display-note{
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+}
+.display-title{
+  font-size: 35px;
+  font-weight: 700;
+}
+.display-line{
+  border: 4px solid black;
+  border-radius: 10px;
+  width: 60px;
+}
+.display-para{
+  font-size: 15px;
+  text-align: center;
+  padding: 0px 40px;
+}
+.display-icons{
+  display: flex;
+  gap: 25px;
+}
+.display-icons>img:nth-child(1){
+  border-bottom: 4px solid orangered;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 30px;
+}
+.display-content{
+  /* background-color: burlywood; */
+  min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.display-content-item{
+  min-width: 300px;
+  min-height: 450px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.display-content-item > p{
+   text-align: center;
+   font-size: 15px;
+  padding: 0px 30px;  
+}
+.display-content-item > img{
+  filter: drop-shadow(0px 10px 20px black);
+}
+.display-content-item >button{
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 60px;
+  border-radius: 5px;
+}
+.display-content-item >button:hover{
+  box-shadow: 0px 0px 10px lightgray;
+}
+.display-content-item >button:hover{
+   background-color: orangered;
+}
+/* --------------------- */
+
+#page-component4 {
+  grid-area: footer;
+  padding: 30px;
+  background-color: black;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.web-info{
+  width: 400px;
+}
+.web-info-item{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     
+}
+.web-info-item1{
+  color: white;
+}
+.web-info-item >p{
+  color: white;
+  font-size: 13px;
+  padding: 15px;
+}
+.acc-info{
+  padding: 15px;
+  color: white;
+   display: flex; 
+  min-width: 350px;
+  min-height: 250px;
+}
+.acc-info-item{
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  padding: 80px;
+}
+
+.acc-info-item > li{
+  margin-top: 20px;
+  font-size: 12px;
+}
+.line1{
+  border: 2px solid white;
+  height: 230px;
+  position: relative;
+  top: 30px;
+}
+.line2{
+  border: 2px solid white;
+  height: 230px;
+  position: relative;
+  top: 30px;
+}
+
+
